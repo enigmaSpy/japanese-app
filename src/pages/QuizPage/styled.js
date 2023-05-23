@@ -79,12 +79,17 @@ export const SubmitButton = styled.button`
 `;
 
 export const NextButton = styled.button`
+    cursor: pointer;
     width: 340px;
     padding: 12px 20px;
     display: none;
     border-radius: 4px;
     ${({ isCorrect }) => isCorrect && css`
     display: block;
+  `}
+  ${({ reset }) => reset && css`
+    display: block;
+    margin: 0 auto;
   `}
 
   @media (max-width: 768px) {
