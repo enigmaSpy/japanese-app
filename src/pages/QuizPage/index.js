@@ -40,7 +40,7 @@ const QuizPage = () => {
     const handleCheck = (e) => {
         e.preventDefault();
         if (alphabet.length > 0) {
-            if (anwser.toLocaleLowerCase === alphabet[randomChar].roumaji) {
+            if (anwser.toLocaleLowerCase() === alphabet[randomChar].roumaji) {
                 setIsCorrect(true);
                 removeChar(id, alphabet[randomChar].id);
                 setRandomChar(Math.floor(Math.random() * alphabet.length));
