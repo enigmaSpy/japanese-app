@@ -5,16 +5,19 @@ export const Nav = styled.nav`
     background: #fff;
     display:flex;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
 `;
-
+export const NavList = styled.ul`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0 ;
+  `;
 export const ListItem = styled.li`
     list-style: none;
     display: inline-block;
-    padding: 10px 20px;
-    @media (max-width: 768px) {
-        padding: 0 20px;
-    
-  }
+  
 `;
 
 export const StyledNavLink = styled(NavLink)`

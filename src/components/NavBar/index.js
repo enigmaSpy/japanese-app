@@ -1,18 +1,18 @@
 import { Outlet } from "react-router-dom"
-import { Nav,ListItem ,StyledNavLink} from "./styled";
+import { Nav,ListItem ,StyledNavLink,NavList} from "./styled";
 
 const NavBar = () =>{
     return (
         <>
            <Nav>
-           <ul>
+           <NavList>
                 <ListItem>
                     <StyledNavLink  to="hiraganaPage">Hiragana</StyledNavLink>
                 </ListItem>
                 <ListItem>
                     <StyledNavLink  to="katakanaPage">Katakana</StyledNavLink>
                 </ListItem>
-            </ul>
+            </NavList>
            </Nav>
             <Outlet/>
         </>
