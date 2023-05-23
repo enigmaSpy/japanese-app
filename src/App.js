@@ -16,7 +16,10 @@ function App() {
             <Route index element={<HiraganaPage />} />
             <Route path="quizPage/:id" element={<QuizPage />} />
           </Route>
-          <Route path="katakanaPage" element={<KatakanaPage />} />
+          <Route path="katakanaPage" >
+            <Route index element={<KatakanaPage />} />
+            <Route path="quizPage/:id" element={<QuizPage />} />
+          </Route>
         </Route>
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
