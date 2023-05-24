@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import HiraganaPage from "./pages/HiraganaPage";
 import KatakanaPage from "./pages/KatakanaPage";
 import QuizPage from "./pages/QuizPage";
+import FlashCards from "./pages/FlashCardsPage";
 
 function App() {
 
@@ -15,10 +16,12 @@ function App() {
           <Route path="hiraganaPage" >
             <Route index element={<HiraganaPage />} />
             <Route path="quizPage/:id" element={<QuizPage />} />
+            <Route path="flashcardsPage/:id" element={<FlashCards />} />
           </Route>
           <Route path="katakanaPage" >
             <Route index element={<KatakanaPage />} />
             <Route path="quizPage/:id" element={<QuizPage />} />
+            <Route path="flashcardsPage/:id" element={<FlashCards />} />
           </Route>
         </Route>
         <Route path="*" element={<h1>Not Found</h1>} />
