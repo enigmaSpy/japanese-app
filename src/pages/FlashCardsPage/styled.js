@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -14,7 +14,13 @@ export const CardContainer = styled.div`
   user-select: none;
   cursor: pointer;
   perspective: 1000px;
-
+  
+  
+   ${({ isFlipped }) => isFlipped && css`
+   > div > div {
+    transform: rotateY(180deg);
+  }
+   `}
   
 `;    
 export const CardContent = styled.div`
@@ -33,22 +39,16 @@ const Card = styled.div`
   align-items: center;
   position: absolute;
   font-size: 2rem;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-  ${({isFlipped}) => isFlipped && css`
-  
-  transform: rotateY(180deg);
-  `}
-`;
+  transition: transform .3s ease-in;
+  backface-visibility: hidden;
+  `;
 
 export const FrontCard = styled(Card)`
- 
-    
-  
+rotate: y 180deg;
 `;
 
 export const BackCard = styled(Card)`
-
+  
 
 `;
 
