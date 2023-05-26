@@ -1,8 +1,8 @@
 import { useState,useEffect } from "react";
-import katakanaData from './katakana.json';
-import hiraganaData from './hiragana.json';
+import katakanaData from './data/katakana.json';
+import hiraganaData from './data/hiragana.json';
 
-const useAlphabet = () => {
+const useQuiz = () => {
     const katakana = katakanaData.map((item, index) => ({
         id: index + 1,
         ...item
@@ -57,4 +57,4 @@ const useAlphabet = () => {
     return [quizAlphabet, removeChar, resetQuiz];
 };
 
-export default useAlphabet;
+export default useQuiz;
