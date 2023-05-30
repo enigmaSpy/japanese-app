@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/japanese-app/static/css/main.27f64b6a.css",
-    "main.js": "/japanese-app/static/js/main.7138c7be.js",
+    "main.js": "/japanese-app/static/js/main.ab074e0c.js",
     "index.html": "/japanese-app/index.html",
     "main.27f64b6a.css.map": "/japanese-app/static/css/main.27f64b6a.css.map",
-    "main.7138c7be.js.map": "/japanese-app/static/js/main.7138c7be.js.map"
+    "main.ab074e0c.js.map": "/japanese-app/static/js/main.ab074e0c.js.map"
   },
   "entrypoints": [
     "static/css/main.27f64b6a.css",
-    "static/js/main.7138c7be.js"
+    "static/js/main.ab074e0c.js"
   ]
 }
