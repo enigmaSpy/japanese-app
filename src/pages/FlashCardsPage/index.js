@@ -50,15 +50,11 @@ const FlashCards = () => {
             const x = eventData.deltaX;
             const y = eventData.deltay;
             setCoords({ x, y });
-            },
-        onTap: () => {
-            setIsFlipped(!isFlipped);
         },
         onSwipedLeft: () => {
             handleNotKnow();
         },
         onSwipedRight: () => {
-            console.log('right');
             handleKnow();
         },
         onTouchEndOrOnMouseUp: () => {
@@ -74,7 +70,7 @@ const FlashCards = () => {
                 <Button onClick={() => resetFlashCards(id)}>Reset</Button>
             ) : (
                 <>
-                    <CardContainer isFlipped={isFlipped} coords={coords} {...swipeHandlers}>
+                    <CardContainer isFlipped={isFlipped} onClick={() => setIsFlipped(!isFlipped)} coords={coords} {...swipeHandlers}>
                         <CardContent>
                             <FrontCard>{alphabet[charIndex]?.kana}</FrontCard>
                             <BackCard>{alphabet[charIndex]?.roumaji}</BackCard>
