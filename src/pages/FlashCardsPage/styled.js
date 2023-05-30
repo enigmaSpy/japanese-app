@@ -1,10 +1,15 @@
 import styled, { css } from "styled-components";
 
+
+
+
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+  overflow-x: hidden;
 `;
 
 export const CardContainer = styled.div`
@@ -15,7 +20,15 @@ export const CardContainer = styled.div`
   cursor: pointer;
   perspective: 1000px;
   
+
+  ${({coords})=> coords && css`
   
+    top: ${coords.y}px;
+    left: ${coords.x}px;
+    transform: rotate(${coords.x / 10}deg);
+    
+  `}
+
    ${({ isFlipped }) => isFlipped && css`
    > div > div {
     transform: rotateY(180deg);
