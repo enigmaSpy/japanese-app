@@ -64,7 +64,13 @@ export const Button = styled.button`
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
   :hover {
+    background-color: #0056b3;
     cursor: pointer;
   }
 `;
