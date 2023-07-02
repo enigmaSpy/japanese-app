@@ -9,16 +9,30 @@ const PronPage = () => {
   const alphabet =
     id === "hiragana" ? hiraganaData : id === "katakana" ? katakanaData : null;
 
+    const speak =(word)=>{
+      if('speechSynthesis' in window){
+        const msg = new SpeechSynthesisUtterance();
+        const voices = speechSynthesis.getVoices();
+        
+        msg.lang = 'ja-JP';
+        msg.rate = 1.0;
+        msg.pitch = 1.0;
+        msg.text = word;
+
+        speechSynthesis.cancel();
+        window.speechSynthesis.speak(msg);
+      };
+    }
   return (
     <>
       <h1>Pronunciation {id}</h1>
       <PronunciationPageContainer>
         {alphabet !== null &&
           alphabet.map((item, index) => (
-            <AlphabetItem key={index}>
-              <Kana>{item.kana}</Kana>
-              <Roumaji>{item.roumaji}</Roumaji>
-              <KanaType>type-{item.type}</KanaType>
+            <AlphabetItem key={index} onClick={()=>{speak(item.kana)}}> 
+              <Kana>{item?.kana}</Kana>
+              <Roumaji>{item?.roumaji}</Roumaji>
+              <KanaType>type-{item?.type}</KanaType>
             </AlphabetItem>
           ))}
       </PronunciationPageContainer>
