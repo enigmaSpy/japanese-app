@@ -5,6 +5,7 @@ import HiraganaPage from "./pages/HiraganaPage";
 import KatakanaPage from "./pages/KatakanaPage";
 import QuizPage from "./pages/QuizPage";
 import FlashCards from "./pages/FlashCardsPage";
+import PronPage from "./pages/PronunciationPage";
 
 function App() {
 
@@ -17,11 +18,13 @@ function App() {
             <Route index element={<HiraganaPage />} />
             <Route path="quizPage/:id" element={<QuizPage />} />
             <Route path="flashcardsPage/:id" element={<FlashCards />} />
+            <Route path="pronunciationPage/:id" element={<PronPage />} />
           </Route>
           <Route path="katakanaPage" >
             <Route index element={<KatakanaPage />} />
             <Route path="quizPage/:id" element={<QuizPage />} />
             <Route path="flashcardsPage/:id" element={<FlashCards />} />
+            <Route path="pronunciationPage/:id" element={<PronPage />} />
           </Route>
         </Route>
         <Route path="*" element={<h1>Not Found</h1>} />

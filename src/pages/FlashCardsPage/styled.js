@@ -37,7 +37,6 @@ export const CardContainer = styled.div`
   
 `;    
 export const CardContent = styled.div`
-     
 `;
 
 const Card = styled.div`
@@ -58,10 +57,13 @@ const Card = styled.div`
 
 export const FrontCard = styled(Card)`
 rotate: y 180deg;
+font-size: 4rem;
+
 `;
 
 export const BackCard = styled(Card)`
   
+font-size: 4rem;
 
 `;
 
