@@ -1,10 +1,14 @@
 import styled, { css } from "styled-components";
 
 export const QuizTitle = styled.h1`
+  width: 300px;
   font-size: 28px;
-  text-align: center;
   margin-bottom: 20px;
-`;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 21px auto;
+`
 
 export const QuizContainer = styled.div`
   display: flex;
@@ -96,6 +100,22 @@ export const NextButton = styled.button`
     width: 320px;
   }
 `;
+
+export const  ResetButton = styled.button`
+  cursor: pointer;
+  padding: 12px 20px;
+  background-color: #fff;
+  color: #336699;
+  border: 1px solid #336699;
+  border-radius: 4px;
+  font-size: 16px;
+  &:hover {
+    background-color: #336699;
+    color: #fff;
+  }
+
+`; 
+
 
 export const CharsLeft = styled.p`
   font-size: 12px;

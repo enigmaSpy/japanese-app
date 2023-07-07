@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PronunciationPageContainer = styled.div`
   display: flex;
@@ -43,7 +43,7 @@ export const Kana = styled.h2`
   font-weight: 700;
   margin: 0;
   padding: 5px;
-  color:  rgb(51, 102, 153);
+  color: rgb(51, 102, 153);
 `;
 
 export const Roumaji = styled.h3`
@@ -51,7 +51,7 @@ export const Roumaji = styled.h3`
   font-weight: 400;
   margin: 0;
   padding: 5px;
-  color:  rgb(51, 102, 153);
+  color: rgb(51, 102, 153);
 `;
 
 export const KanaType = styled.h4`
