@@ -11,6 +11,7 @@ import {
   QuizTitle,
   SubmitButton,
   CharsLeft,
+  ResetButton,
   Allert
 } from "./styled";
 
@@ -64,8 +65,9 @@ const QuizPage = () => {
     <>
       {alphabet.length > 0 ? (
         <>
-          <QuizTitle>Quiz: {id}</QuizTitle>
+          <QuizTitle>Quiz: {id} <ResetButton onClick={() => resetQuiz(id)}>Reset</ResetButton></QuizTitle>
           <CharsLeft>Zostało: {alphabet.length} znaków</CharsLeft>
+
           <Allert isCorrect={!isCorrect}>
             poprawna odpowiedź: {alphabet[randomCharIndex]?.roumaji}
           </Allert>
